@@ -35,8 +35,8 @@ Win8ProductID = "Windows Product ID: " & WshShell.RegRead(regKey & "ProductID") 
 Win8ProductKey = ConvertToKey(DigitalProductId)
 strProductKey ="Windows Key: " & Win8ProductKey
 Win8ProductID = Win8ProductName & Win8ProductID & strProductKey
-MsgBox(Win8ProductKey)
-MsgBox(Win8ProductID)
+' MsgBox Win8ProductKey, vbInformation, "Windows Key Viewer"
+MsgBox Win8ProductID, vbInformation, "Windows Key Viewer"
 Function ConvertToKey(regKey)
     Const KeyOffset = 52
     isWin8 = (regKey(66) \ 6) And 1
